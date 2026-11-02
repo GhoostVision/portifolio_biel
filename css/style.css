@@ -134,13 +134,18 @@ header .mudar_cor button {
   margin: 0 1px 0 10px;
   border-radius: 5px;
 }
-.card-projeto button {
+.card-projeto a {
   border: 1.5px solid black;
   background: white;
   margin: 5px 10px;
+  font-weight: 800;
+  text-align: center;
+  display: inline-block;
   padding: 3px 0;
   width: 95%;
   border-radius: 4px;
+  text-decoration: none;
+  color: rgb(14, 14, 14);
 }
 
 .box-card-tempo {
@@ -368,10 +373,10 @@ header .links-nav li a:hover {
 .card-projeto:hover {
   transform: scale(1.02);
 }
-.card-projeto button {
+.card-projeto a {
   transition: 0.8s;
 }
-.card-projeto button:hover {
+.card-projeto a:hover {
   transform: scale(1.02);
   color: white;
   background: rgb(14, 14, 14);
