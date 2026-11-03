@@ -1,54 +1,65 @@
 @use "../utilites/color.scss" as *;
 
-.card-projeto{
+.card-projeto {
+    display: flex;
     flex-direction: column;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
     border: 1px solid black;
     padding-bottom: 10px;
     border-radius: 10px;
 
-    img{
+    img {
         width: 100%;
         height: 200px;
+        object-fit: cover;
         margin-bottom: 10px;
-        border-radius:10px 10px 0 0;
+        border-radius: 10px 10px 0 0;
     }
 
-    span{
+    span {
         font-size: 15px;
         font-weight: 200;
-        margin:10px;
-    }
-    h3{
-        font-size: 28px;
-        font-weight: 800;
-        margin: 10px 10px;
+        margin: 10px;
     }
 
-    p{
+    h3 {
+        font-size: 28px;
+        font-weight: 800;
+        margin: 10px;
+    }
+
+    p {
         font-size: 14px;
         margin: 0 10px;
     }
 
-    .linguegens-card{
-        margin: 10px 0;
-        span{
+    .linguegens-card {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 10px;
+
+        span {
             border: 1px solid black;
             font-weight: 400;
             padding: 3px 8px;
-            margin: 0 1px 0 10px;
+            margin: 0;
             border-radius: 5px;
+            font-size: 13px;
         }
     }
 
-    a{
+    a {
         border: 1.5px solid black;
         background: white;
         margin: 5px 10px;
         font-weight: 800;
         text-align: center;
-        display: inline-block;
-        padding: 3px 0;
-        width: 95%;
+        display: block;
+        padding: 5px 0;
+        width: auto;
         border-radius: 4px;
         text-decoration: none;
         color: $cor-secunadaria;

@@ -1,36 +1,49 @@
 @use "../utilites/color.scss" as *;
 
-.tecnologias{
-    margin: 50px;
-    height: 300px;
-    .titulos-box{
-        margin-bottom:30px ;
-        h2{
+.tecnologias {
+    margin: 50px 0;
+    min-height: 300px;
+    height: auto;
+
+    .titulos-box {
+        margin-bottom: 30px;
+
+        h2 {
             font-size: 20px;
             font-weight: 800;
             margin: 10px 0;
         }
 
-        h3{
+        h3 {
             font-weight: 200;
             font-size: 35px;
         }
     }
 
-    .box-info{
-        .linguagens, .ferramentas, .frameworks{
+    .box-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        .linguagens,
+        .ferramentas,
+        .frameworks {
+            flex: 1 1 180px;
+            min-width: 0;
             border: 1px solid $cor-prata;
-            margin-right:20px;
+            margin-right: 0;
             padding: 8px 20px;
             border-radius: 20px;
             background: $cor-terciaria;
-            h3{
+            box-sizing: border-box;
+
+            h3 {
                 font-size: 20px;
                 font-weight: 800;
                 margin-bottom: 20px;
             }
 
-            li{
+            li {
                 margin: 5px 0;
                 font-weight: 300;
             }

@@ -1,65 +1,299 @@
-//celular
-@media (max-width:575px){
-    nav{
-      .links-nav{
-        display: none;
+// Tablet
+@media (max-width: 991px) {
+    header {
+        nav {
+            .links-nav {
+                ul {
+                    gap: 12px;
+
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
         }
     }
-
-    .home_img{
-        display: none !important;
-    }
-
-    .projetos{
-        height: 1550px;
-    }
-
-    .minha_foto{
-        display: none;
-    }
-
-    .sobre-mim{
-        height: 470px;
-    }
-
-    .tecnologias{
-        height: 750px;
-    }
-    .box-info{
-       flex-direction: column;
-    }
-
-    .linguagens,.ferramentas,.frameworks{
-        width: 100%;
-    }
-
-    .contato{
-        height: 300px;
-    }
-
-    .links-contato{
-        a{
-            text-align: center;
-            padding: 0;
-            font-size: 15px;
-        }
-    }
-
-    footer{
-        .box-footer{
-            p{
+    footer {
+        .box-footer {
+            p {
                 font-size: 13px;
+            }
+        }
+    }
+
+    .home {
+        min-height: 350px;
+
+        p {
+            width: 95%;
+        }
+
+        img {
+            height: 280px;
+        }
+    }
+
+    .contato {
+        .titulos-box {
+            h3 {
+                font-size: 30px;
+            }
+        }
+
+        .links-contato {
+            .caixa-links {
+                gap: 12px;
+            }
+        }
+    }
+
+    .projetos {
+        min-height: auto;
+
+        .titulos-box {
+            h3 {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .card-projeto {
+        img {
+            height: 180px;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .linguegens-card {
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .sobre-mim {
+        min-height: auto;
+
+        .titulos-box {
+            h3 {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .minha_foto {
+        img {
+            width: 220px;
+            height: 220px;
+        }
+    }
+
+     .tecnologias {
+        min-height: auto;
+
+        .titulos-box {
+            h3 {
+                font-size: 30px;
+            }
+        }
+
+        .box-info {
+            gap: 12px;
+
+            .linguagens,
+            .ferramentas,
+            .frameworks {
+                flex: 1 1 200px;
             }
         }
     }
 }
 
-//tablet
-@media (min-width: 576px) and (max-width: 991px){
+// Celular
+@media (max-width: 575px) {
+    header {
+        nav {
+            .meu_nome {
+                p {
+                    font-size: 17px;
+                }
+            }
 
-}
+            .links-nav {
+                display: none;
+            }
+        }
+    }
 
-//desktop/pc
-@media (max-width:992px){
     
+
+     footer {
+        .box-footer {
+            padding: 8px 10px;
+
+            p {
+                font-size: 11px;
+            }
+        }
+    }
+
+    .home {
+        min-height: auto;
+        margin: 30px 0;
+
+        h1 {
+            font-size: 28px;
+        }
+
+        p {
+            width: 100%;
+            font-size: 14px;
+        }
+
+        a,
+        button {
+            margin: 5px 2px;
+            padding: 7px 12px;
+            font-size: 13px;
+        }
+
+        img {
+            height: 230px;
+            margin-top: 25px;
+        }
+    }
+    .contato {
+        margin: 35px 0;
+        min-height: auto;
+
+        .titulos-box {
+            h2 {
+                font-size: 18px;
+            }
+
+            h3 {
+                font-size: 26px;
+            }
+        }
+
+        .links-contato {
+            gap: 15px;
+
+            .caixa-links {
+                gap: 10px;
+
+                a {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+            }
+        }
+
+        .contato-voltar-topo {
+            padding: 9px;
+            font-size: 14px;
+        }
+    }
+
+    .projetos {
+        margin: 35px 0;
+
+        .titulos-box {
+            margin-bottom: 20px;
+
+            h2 {
+                font-size: 18px;
+            }
+
+            h3 {
+                font-size: 26px;
+            }
+        }
+    }
+
+    .card-projeto {
+        img {
+            height: 190px;
+        }
+
+        h3 {
+            font-size: 23px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+
+        .linguegens-card {
+            gap: 5px;
+
+            span {
+                font-size: 12px;
+                padding: 3px 7px;
+            }
+        }
+    }
+
+    .sobre-mim {
+        min-height: auto;
+        margin: 35px 0;
+
+        .titulos-box {
+            margin-bottom: 20px;
+
+            h2 {
+                font-size: 18px;
+            }
+
+            h3 {
+                font-size: 26px;
+            }
+        }
+    }
+
+    .minha_foto {
+
+        img {
+            margin-top: 20px;
+            width: 190px;
+            height: 190px;
+        }
+    }
+
+    .tecnologias {
+        margin: 35px 0;
+        min-height: auto;
+
+        .titulos-box {
+            margin-bottom: 20px;
+
+            h2 {
+                font-size: 18px;
+            }
+
+            h3 {
+                font-size: 26px;
+            }
+        }
+
+        .box-info {
+            flex-direction: column;
+            gap: 15px;
+
+            .linguagens,
+            .ferramentas,
+            .frameworks {
+                width: 100%;
+                flex: none;
+                padding: 12px 18px;
+
+                h3 {
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
 }

@@ -28,6 +28,16 @@ header{
             color: $cor-texto;
         }
     }
+
+    a{
+        transition: 0.5s;
+
+        &:hover{
+            transform: scale(1.03);
+            background:$cor-secunadaria;
+            color: $cor-texto;
+        }
+    }
 }
 
 //projetos card

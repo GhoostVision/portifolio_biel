@@ -1,18 +1,23 @@
 @use "../utilites/color.scss" as *;
 
-footer{
-    background:$cor-secunadaria;
-    height: 35px;
-    margin: 10px 0 0 0 ;
+footer {
+    background: $cor-secunadaria;
+    min-height: 35px;
+    margin: 10px 0 0 0;
     border-top: 2px solid $cor-prata;
 
-    .box-footer{
+    .box-footer {
         display: flex;
         align-items: center;
+        min-height: 35px;
         height: 100%;
-        p{
+        padding: 5px 15px;
+
+        p {
             color: white;
-            margin: 20px;
+            margin: 0;
+            font-size: 14px;
+            text-align: center;
         }
     }
 }

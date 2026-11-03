@@ -25,13 +25,13 @@ main {
 
 header {
   background: rgb(14, 14, 14);
-  backdrop-filter: blur(100%);
-  height: 45px;
-  border-bottom: 2px solid rgb(192, 192, 192);
+  backdrop-filter: blur(10px);
+  min-height: 50px;
   width: 100%;
+  border-bottom: 2px solid rgb(192, 192, 192);
 }
 header nav {
-  height: 100%;
+  min-height: 50px;
   align-items: center;
 }
 header nav .meu_nome {
@@ -45,29 +45,39 @@ header nav .meu_nome p {
   font-weight: 200;
   font-size: 20px;
 }
-header nav ul {
+header nav .links-nav {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
   margin: 0;
+  padding: 0;
 }
-header nav ul li {
+header nav .links-nav li {
   list-style: none;
 }
-header nav ul li a {
+header nav .links-nav li a {
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
-header .mudar_cor button {
+
+.mudar_cor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mudar_cor button {
   padding: 5px 10px;
   background: white;
   border-radius: 50%;
   border: none;
+  cursor: pointer;
 }
 
 .home {
-  height: 400px;
+  min-height: 400px;
+  height: auto;
   margin: 50px 0;
 }
 .home span {
@@ -83,11 +93,27 @@ header .mudar_cor button {
   width: 80%;
   margin: 20px 0;
 }
+.home a {
+  display: inline-block;
+  border-radius: 4px;
+  border: 2px solid black;
+  background: white;
+  font-weight: 700;
+  padding: 8px 20px;
+  text-decoration: none;
+  color: rgb(14, 14, 14);
+  margin: 0 2px;
+}
+.home a i {
+  font-weight: 1000;
+}
 .home button {
   border-radius: 4px;
   border: 2px solid black;
   background: white;
   padding: 5px 20px;
+  text-decoration: none;
+  color: rgb(14, 14, 14);
   margin: 0 2px;
 }
 .home button i {
@@ -96,10 +122,15 @@ header .mudar_cor button {
 .home img {
   width: 100%;
   height: 330px;
+  object-fit: contain;
 }
 
 .card-projeto {
+  display: flex;
   flex-direction: column;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
   border: 1px solid black;
   padding-bottom: 10px;
   border-radius: 10px;
@@ -107,6 +138,7 @@ header .mudar_cor button {
 .card-projeto img {
   width: 100%;
   height: 200px;
+  object-fit: cover;
   margin-bottom: 10px;
   border-radius: 10px 10px 0 0;
 }
@@ -118,21 +150,25 @@ header .mudar_cor button {
 .card-projeto h3 {
   font-size: 28px;
   font-weight: 800;
-  margin: 10px 10px;
+  margin: 10px;
 }
 .card-projeto p {
   font-size: 14px;
   margin: 0 10px;
 }
 .card-projeto .linguegens-card {
-  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px;
 }
 .card-projeto .linguegens-card span {
   border: 1px solid black;
   font-weight: 400;
   padding: 3px 8px;
-  margin: 0 1px 0 10px;
+  margin: 0;
   border-radius: 5px;
+  font-size: 13px;
 }
 .card-projeto a {
   border: 1.5px solid black;
@@ -140,9 +176,9 @@ header .mudar_cor button {
   margin: 5px 10px;
   font-weight: 800;
   text-align: center;
-  display: inline-block;
-  padding: 3px 0;
-  width: 95%;
+  display: block;
+  padding: 5px 0;
+  width: auto;
   border-radius: 4px;
   text-decoration: none;
   color: rgb(14, 14, 14);
@@ -170,7 +206,8 @@ header .mudar_cor button {
 }
 
 .projetos {
-  height: 600px;
+  min-height: 600px;
+  height: auto;
   margin: 50px 0;
 }
 .projetos .titulos-box {
@@ -187,8 +224,9 @@ header .mudar_cor button {
 }
 
 .tecnologias {
-  margin: 50px;
-  height: 300px;
+  margin: 50px 0;
+  min-height: 300px;
+  height: auto;
 }
 .tecnologias .titulos-box {
   margin-bottom: 30px;
@@ -202,25 +240,40 @@ header .mudar_cor button {
   font-weight: 200;
   font-size: 35px;
 }
-.tecnologias .box-info .linguagens, .tecnologias .box-info .ferramentas, .tecnologias .box-info .frameworks {
+.tecnologias .box-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.tecnologias .box-info .linguagens,
+.tecnologias .box-info .ferramentas,
+.tecnologias .box-info .frameworks {
+  flex: 1 1 180px;
+  min-width: 0;
   border: 1px solid rgb(192, 192, 192);
-  margin-right: 20px;
+  margin-right: 0;
   padding: 8px 20px;
   border-radius: 20px;
   background: rgb(253, 253, 253);
+  box-sizing: border-box;
 }
-.tecnologias .box-info .linguagens h3, .tecnologias .box-info .ferramentas h3, .tecnologias .box-info .frameworks h3 {
+.tecnologias .box-info .linguagens h3,
+.tecnologias .box-info .ferramentas h3,
+.tecnologias .box-info .frameworks h3 {
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 20px;
 }
-.tecnologias .box-info .linguagens li, .tecnologias .box-info .ferramentas li, .tecnologias .box-info .frameworks li {
+.tecnologias .box-info .linguagens li,
+.tecnologias .box-info .ferramentas li,
+.tecnologias .box-info .frameworks li {
   margin: 5px 0;
   font-weight: 300;
 }
 
 .sobre-mim {
-  height: 400px;
+  min-height: 400px;
+  height: auto;
 }
 .sobre-mim .titulos-box {
   margin-bottom: 30px;
@@ -243,13 +296,16 @@ header .mudar_cor button {
 .minha_foto img {
   width: 250px;
   height: 250px;
+  max-width: 100%;
+  object-fit: cover;
   border-radius: 50%;
   box-shadow: 5px 5px 15px black;
 }
 
 .contato {
-  margin: 50px;
-  height: 250px;
+  margin: 50px 0;
+  min-height: 250px;
+  height: auto;
 }
 .contato .titulos-box {
   margin-bottom: 20px;
@@ -268,7 +324,7 @@ header .mudar_cor button {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 50px;
+  height: auto;
   padding: 0;
 }
 .contato .links-contato .caixa-links {
@@ -276,78 +332,246 @@ header .mudar_cor button {
   gap: 20px;
 }
 .contato .links-contato .caixa-links a {
-  width: 90%;
+  flex: 1;
+  width: auto;
   text-decoration: none;
   color: black;
   font-weight: 600;
   border: 1px solid rgb(192, 192, 192);
-  padding: 10px 10px;
+  padding: 10px;
   border-radius: 10px;
 }
 .contato .contato-voltar-topo {
+  display: block;
   background: rgb(14, 14, 14);
   color: white;
   text-align: center;
   width: 100%;
   text-decoration: none;
-  color: white;
   font-weight: 600;
   border: 1px solid rgb(192, 192, 192);
-  padding: 10px 10px;
+  padding: 10px;
   border-radius: 10px;
 }
 
 footer {
   background: rgb(14, 14, 14);
-  height: 35px;
+  min-height: 35px;
   margin: 10px 0 0 0;
   border-top: 2px solid rgb(192, 192, 192);
 }
 footer .box-footer {
   display: flex;
   align-items: center;
+  min-height: 35px;
   height: 100%;
+  padding: 5px 15px;
 }
 footer .box-footer p {
   color: white;
-  margin: 20px;
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
 }
 
-@media (max-width: 575px) {
-  nav .links-nav {
-    display: none;
+@media (max-width: 991px) {
+  header nav .links-nav ul {
+    gap: 12px;
   }
-  .home_img {
-    display: none !important;
-  }
-  .projetos {
-    height: 1550px;
-  }
-  .minha_foto {
-    display: none;
-  }
-  .sobre-mim {
-    height: 470px;
-  }
-  .tecnologias {
-    height: 750px;
-  }
-  .box-info {
-    flex-direction: column;
-  }
-  .linguagens, .ferramentas, .frameworks {
-    width: 100%;
-  }
-  .contato {
-    height: 300px;
-  }
-  .links-contato a {
-    text-align: center;
-    padding: 0;
-    font-size: 15px;
+  header nav .links-nav ul a {
+    font-size: 14px;
   }
   footer .box-footer p {
     font-size: 13px;
+  }
+  .home {
+    min-height: 350px;
+  }
+  .home p {
+    width: 95%;
+  }
+  .home img {
+    height: 280px;
+  }
+  .contato .titulos-box h3 {
+    font-size: 30px;
+  }
+  .contato .links-contato .caixa-links {
+    gap: 12px;
+  }
+  .projetos {
+    min-height: auto;
+  }
+  .projetos .titulos-box h3 {
+    font-size: 30px;
+  }
+  .card-projeto img {
+    height: 180px;
+  }
+  .card-projeto h3 {
+    font-size: 24px;
+  }
+  .card-projeto .linguegens-card span {
+    font-size: 12px;
+  }
+  .sobre-mim {
+    min-height: auto;
+  }
+  .sobre-mim .titulos-box h3 {
+    font-size: 30px;
+  }
+  .minha_foto img {
+    width: 220px;
+    height: 220px;
+  }
+  .tecnologias {
+    min-height: auto;
+  }
+  .tecnologias .titulos-box h3 {
+    font-size: 30px;
+  }
+  .tecnologias .box-info {
+    gap: 12px;
+  }
+  .tecnologias .box-info .linguagens,
+  .tecnologias .box-info .ferramentas,
+  .tecnologias .box-info .frameworks {
+    flex: 1 1 200px;
+  }
+}
+@media (max-width: 575px) {
+  header nav .meu_nome p {
+    font-size: 17px;
+  }
+  header nav .links-nav {
+    display: none;
+  }
+  footer .box-footer {
+    padding: 8px 10px;
+  }
+  footer .box-footer p {
+    font-size: 11px;
+  }
+  .home {
+    min-height: auto;
+    margin: 30px 0;
+  }
+  .home h1 {
+    font-size: 28px;
+  }
+  .home p {
+    width: 100%;
+    font-size: 14px;
+  }
+  .home a,
+  .home button {
+    margin: 5px 2px;
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+  .home img {
+    height: 230px;
+    margin-top: 25px;
+  }
+  .contato {
+    margin: 35px 0;
+    min-height: auto;
+  }
+  .contato .titulos-box h2 {
+    font-size: 18px;
+  }
+  .contato .titulos-box h3 {
+    font-size: 26px;
+  }
+  .contato .links-contato {
+    gap: 15px;
+  }
+  .contato .links-contato .caixa-links {
+    gap: 10px;
+  }
+  .contato .links-contato .caixa-links a {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .contato .contato-voltar-topo {
+    padding: 9px;
+    font-size: 14px;
+  }
+  .projetos {
+    margin: 35px 0;
+  }
+  .projetos .titulos-box {
+    margin-bottom: 20px;
+  }
+  .projetos .titulos-box h2 {
+    font-size: 18px;
+  }
+  .projetos .titulos-box h3 {
+    font-size: 26px;
+  }
+  .card-projeto img {
+    height: 190px;
+  }
+  .card-projeto h3 {
+    font-size: 23px;
+  }
+  .card-projeto p {
+    font-size: 13px;
+  }
+  .card-projeto .linguegens-card {
+    gap: 5px;
+  }
+  .card-projeto .linguegens-card span {
+    font-size: 12px;
+    padding: 3px 7px;
+  }
+  .sobre-mim {
+    min-height: auto;
+    margin: 35px 0;
+  }
+  .sobre-mim .titulos-box {
+    margin-bottom: 20px;
+  }
+  .sobre-mim .titulos-box h2 {
+    font-size: 18px;
+  }
+  .sobre-mim .titulos-box h3 {
+    font-size: 26px;
+  }
+  .minha_foto img {
+    margin-top: 20px;
+    width: 190px;
+    height: 190px;
+  }
+  .tecnologias {
+    margin: 35px 0;
+    min-height: auto;
+  }
+  .tecnologias .titulos-box {
+    margin-bottom: 20px;
+  }
+  .tecnologias .titulos-box h2 {
+    font-size: 18px;
+  }
+  .tecnologias .titulos-box h3 {
+    font-size: 26px;
+  }
+  .tecnologias .box-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .tecnologias .box-info .linguagens,
+  .tecnologias .box-info .ferramentas,
+  .tecnologias .box-info .frameworks {
+    width: 100%;
+    flex: none;
+    padding: 12px 18px;
+  }
+  .tecnologias .box-info .linguagens h3,
+  .tecnologias .box-info .ferramentas h3,
+  .tecnologias .box-info .frameworks h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
   }
 }
 header .links-nav li a {
@@ -362,6 +586,14 @@ header .links-nav li a:hover {
   transition: 0.5s;
 }
 .home button:hover {
+  transform: scale(1.03);
+  background: rgb(14, 14, 14);
+  color: white;
+}
+.home a {
+  transition: 0.5s;
+}
+.home a:hover {
   transform: scale(1.03);
   background: rgb(14, 14, 14);
   color: white;

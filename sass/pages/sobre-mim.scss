@@ -1,27 +1,33 @@
-.sobre-mim{
-    height: 400px;
-    .titulos-box{
-        margin-bottom:30px ;
-        h2{
+.sobre-mim {
+    min-height: 400px;
+    height: auto;
+
+    .titulos-box {
+        margin-bottom: 30px;
+
+        h2 {
             font-size: 20px;
             font-weight: 800;
             margin: 10px 0;
         }
 
-        h3{
+        h3 {
             font-weight: 200;
             font-size: 35px;
         }
     }
 }
 
-.minha_foto{
+.minha_foto {
     display: flex;
     align-items: center;
     justify-content: center;
-    img{
+
+    img {
         width: 250px;
         height: 250px;
+        max-width: 100%;
+        object-fit: cover;
         border-radius: 50%;
         box-shadow: 5px 5px 15px black;
     }
